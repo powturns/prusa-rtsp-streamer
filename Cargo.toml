@@ -1,0 +1,22 @@
+[package]
+name = "prusa-rtsp-streamer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.82"
+retina = "0.4.7"
+tokio = { version = "1.37.0", features = ["full"] }
+url = "2.5.0"
+futures-util = "0.3.30"
+openh264 = "0.6.0"
+byteorder = "1.5.0"
+tracing = { version = "0.1.40", features = ["log-always"] }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+log = "0.4.21"
+turbojpeg = { version = "1.1.0", features = ["image"] }
+reqwest = { version = "0.12.4", default-features = false, features = ["rustls-tls"] }
+serde = { version = "1.0.200", features = ["derive"] }
+toml = "0.8.12"

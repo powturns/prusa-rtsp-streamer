@@ -1,0 +1,12 @@
+[Unit]
+Description=Prusa Connect RTSP Streamer
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+User=jo
+ExecStart=/usr/local/bin/prusa-rtsp-streamer /etc/prusa-rtsp-streamer/config.toml
+
+[Install]
+WantedBy=multi-user.target
